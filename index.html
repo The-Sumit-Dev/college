@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEN Finder | Student Permanent Education Number</title>
+    <meta name="description" content="Find student Permanent Education Number (PEN) details by name easily and securely.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-overlay"></div>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo-wrapper">
+                    <img src="icon.png" alt="Nala Inter College Logo" class="college-logo">
+                </div>
+                
+                <div class="header-info">
+                    <div class="top-row">
+                        <span class="udise-badge">UDISE: 20191311902</span>
+                        <div class="live-indicator">
+                            <span class="dot"></span>
+                            LIVE
+                        </div>
+                    </div>
+                    <h1 class="college-name-main">NALA INTER COLLEGE</h1>
+                    <p class="college-subtext">GOPALPUR, NALA, JAMTARA, JHARKHAND — 815351</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <a href="#" class="admin-link">
+                    <i data-lucide="shield"></i>
+                    <span>Admin Console</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <main>
+            <div id="toastContainer" class="toast-container"></div>
+
+            <section class="search-section">
+                <div class="search-container">
+                    <form id="searchForm" class="google-search-bar">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <div class="search-inputs">
+                            <input type="text" id="nameInput" placeholder="ENTER STUDENT NAME" oninput="this.value = this.value.toUpperCase()" autocomplete="off">
+                        </div>
+                        <button type="submit" id="searchBtn" class="search-btn-pill">
+                            <span>Search</span>
+                        </button>
+                    </form>
+                    <p class="search-hint">Enter full student name for exact record match</p>
+                </div>
+            </section>
+
+            <section id="resultsSection" class="results-section">
+                <div id="noResults" class="empty-state hidden">
+                    <i data-lucide="search-x"></i>
+                    <h3>No Records Found</h3>
+                    <p>We couldn't find any student matching this name. Please check the spelling.</p>
+                </div>
+                <div id="resultsGrid" class="results-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>Made by <a href="https://thesumit.tech" target="_blank" class="author-link">Sumit</a></p>
+            <p class="footer-note">&copy; 2026 Student Data Management System. All records are official.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
